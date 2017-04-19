@@ -3,10 +3,10 @@ import java.sql.*;
 public class CarDB {
 
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";        //Configure the driver needed
-    static final String DB_CONNECTION_URL = "jdbc:mysql://localhost:3306/car";     //Connection string – where's the database?
+    static final String DB_CONNECTION_URL = "jdbc:mysql://localhost/car?useLegacyDatetimeCode=false&serverTimezone=America/Chicago";     //Connection string – where's the database?
 
     static final String USER = "sam";   //TODO replace with your username
-    static final String PASSWORD = "agbeh";   //TODO replace with your password
+    static final String PASSWORD = System.getenv("MYSQL_PW");   //TODO replace with your password
 
     public static void main(String[] args) throws Exception {      //TODO handle exceptions properly
 
